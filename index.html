@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MBank</title>
+    <link rel="stylesheet" href="main.css" />
 </head>
+
 <body>
-    KODUNUZU BURAYA YAZABILIRSINIZ
-    <script src="index.js"></script>
+    <div class="section-center">
+    <div class="header">
+        <h2>MBank</h2>
+        <h4></h4>
+        <p id="balance"></p>
+        <p id="alert"></p>
+        <div>
+            <p id="timer"></p>
+        </div>
+    </div>
+    <div class="container">
+        <form class="form">
+            <h2>Gönderecek Hesap</h2>
+            <div class="accounts">
+                <select class="textInput" id="senderselector">
+                    <option>Seçiniz..</option>
+                    <option>Vadesiz TL</option>
+                    <option>Vadeli TL</option>
+                    <option>Vadesiz Dolar</option>
+                </select>
+            </div>
+            <div class="section">
+                <h2>Alıcı Hesap</h2>
+                <select class="textInput" id="recieverselector">
+                    <option>Seçiniz..</option>
+                    <option>Mahmut TL</option>
+                    <option>Veli TL</option>
+                    <option>Eylül Dolar</option>
+                </select>
+            </div>
+            <div class="section">
+                <h2>Gönderilecek Miktar</h2>
+                <label class="alert"></label>
+                <input type="number" id="moneytosend">
+            </div>
+            <button type="submit" class="send-button" disabled>Gönder</button>
+        </form>
+    </div>
+</div>
+    <script type="module" src="index.js"></script>
 </body>
+
 </html>
